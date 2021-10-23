@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Digit Recognise</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+        
+    </head>
+    <body>
+        <!-- <h1>HEllow</h1> -->
+        <input id="hex" placeholder="enter hex color"></input>
+        <canvas id="draw"></canvas>
+        <button id="predict">predict</button>
+        <form action="/predict" method="POST" >
+          <label for="CityName">City Name:</label>
+          <input id="inp"  type="text" name="CityName" >
+          <input type="submit" placeholder="Go">
+
+    </form>
+        <script src="{{ url_for('static',filename='script.js')}}"></script>
+    </body>
+</html>
