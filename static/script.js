@@ -1,6 +1,6 @@
 var canvas = document.getElementById("draw");
 var ctx = canvas.getContext("2d");
-
+const answer = document.getElementById("answer");
 resize();
 function resize() {
   ctx.canvas.width = window.innerWidth;
@@ -28,7 +28,7 @@ async function onSubmit() {
       body: JSON.stringify({ imageURL: dataURL }),
     });
     const content = await res.json();
-    console.log(content);
+    answer.innerHTML = content.img;
   } catch (error) {
     console.log("Fetch error: ", error);
   }
@@ -42,7 +42,7 @@ function draw(e) {
   // line properties
   ctx.lineWidth = 40; // width of line
   ctx.lineCap = "round"; // rounded end cap
-  ctx.strokeStyle = "#00ffff"; // hex color of line
+  ctx.strokeStyle = "#3E60F9"; // hex color of line
 
   // draw line
   ctx.moveTo(pos.x, pos.y); // from position

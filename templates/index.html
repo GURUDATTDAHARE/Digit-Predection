@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
   </head>
   <body>
-    <canvas id="draw"></canvas>
-    <button onClick="onSubmit()" type="submit">Predict</button>
+    <div class="heading">
+        <h1>Digit Predictor</h1>
+    </div>
+    <div class="container">
+      <div class="input-container">
+        <canvas id="draw"></canvas>
+        <button class="submit-btn" onClick="onSubmit()" type="submit">
+          Predict
+        </button>
+      </div>
+      <div class="answer-container">
+        <h1 id="answer"></h1>
+      </div>
+    </div>
     <script src="{{ url_for('static',filename='script.js')}}"></script>
   </body>
 </html>
