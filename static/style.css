@@ -7,8 +7,8 @@
     color: white;
 }
 :root{
-    --blue : #3E60F9;
     --black: black;
+    --blue : #3E60F9;
     --border-shadow: 8px 8px 13px rgba(62, 96, 249, 0.35);
 }
 
@@ -47,13 +47,18 @@ h1{
     box-shadow: var(--border-shadow);
     margin-top: 50px;
     font-size: 20px;
+    transition: 200ms;
+}
+.submit-btn:active{
+    box-shadow: none;
+    transform: scale(0.91);
 }
 #draw{
     width: 300px;
     height: 300px;
     border-radius: 10px;
     border: 3px solid var(--blue);
-    box-shadow: var(--border-shadow);
+    cursor: url("pen.png"), default;
     margin-top: 80px;
-    cursor: url("pen-ico.svg"), default;
+    box-shadow: var(--border-shadow);
 }
