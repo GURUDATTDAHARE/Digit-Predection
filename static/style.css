@@ -1,6 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    font-family: 'Chelsea Market', cursive;
+    color: white;
+}
+:root{
+    --black: black;
+    --blue : #3E60F9;
+    --border-shadow: 8px 8px 13px rgba(62, 96, 249, 0.35);
+}
+
+.heading{
+    padding: 40px 0;
+    text-align: center;
+}
+h1{
+    color: var(--blue);
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.input-container, .answer-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.answer-container{
+    height: 60vh;
+    font-size: 125px;
+}
+.submit-btn{
+    border: 0;
+    background: transparent;
+    outline: 0;
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--blue);
+    padding: 20px 0;
+    width: 300px;
+    box-shadow: var(--border-shadow);
+    margin-top: 50px;
+    font-size: 20px;
+    transition: 200ms;
+}
+.submit-btn:active{
+    box-shadow: none;
+    transform: scale(0.91);
+}
 #draw{
     width: 300px;
     height: 300px;
-    border: 3px solid red;
-    
+    border-radius: 10px;
+    border: 3px solid var(--blue);
+    cursor: url("pen.png"), default;
+    margin-top: 80px;
+    box-shadow: var(--border-shadow);
 }
